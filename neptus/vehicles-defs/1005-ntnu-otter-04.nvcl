@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\src\schemas\neptus-vehicle.xsd">
+  <!-- Data saved on 2019-09-15T17:16:44.0Z with Neptus version 2019.08.1-dev (compiled on 2019-08-27, gneptus-2019.02.1-dmsmw-97-g917292b78). -->
+  <properties>
+    <id>ntnu-otter-04</id>
+    <name>NTNU-Otter-04</name>
+    <type>ASV</type>
+    <model>Otter</model>
+    <appearance>
+      <x-size>2.0</x-size>
+      <y-size>0.7</y-size>
+      <z-size>0.5</z-size>
+      <top-image-2D>../vehicles-files/lauv/lauv-seacon0-top.png</top-image-2D>
+      <side-image-2D>../vehicles-files/lauv/lauv-seacon0-side.png</side-image-2D>
+      <back-image-2D>../vehicles-files/lauv/lauv-seacon0-back.png</back-image-2D>
+      <presentation-image-2D>../vehicles-files/lauv/lauv-seacon0-presentation.png</presentation-image-2D>
+      <model-3D>../vehicles-files/lauv/lauv-xtreme-2.x3d</model-3D>
+      <icon-color>
+        <r>255</r>
+        <g>154</g>
+        <b>15</b>
+      </icon-color>
+    </appearance>
+      <limits>
+          <valid-zunits>depth</valid-zunits>
+      </limits>
+    <coordinate-system-label>SNAME</coordinate-system-label>
+  </properties>
+  <feasibleManeuvers>
+    <maneuver>
+      <Goto kind="automatic">
+        <finalPoint type="pointType">
+          <point>
+            <id>GotoDestination</id>
+            <name>GotoDestination</name>
+            <coordinate>
+              <latitude>0N</latitude>
+              <longitude>0E</longitude>
+              <depth>0</depth>
+            </coordinate>
+          </point>
+          <radiusTolerance>5</radiusTolerance>
+        </finalPoint>
+        <velocity tolerance="10" type="float" unit="m/s">1.0</velocity>
+        <trajectoryTolerance>
+          <radiusTolerance type="float">1</radiusTolerance>
+        </trajectoryTolerance>
+        <annotation>
+          <documentation>No documentation available</documentation>
+          <implementation-class>pt.lsts.neptus.mp.maneuvers.Goto</implementation-class>
+        </annotation>
+      </Goto>
+    </maneuver>
+    <maneuver>
+      <Loiter kind="automatic">
+        <basePoint type="pointType">
+          <point>
+            <id>LoiterLoc</id>
+            <name>LoiterLoc</name>
+            <coordinate>
+              <latitude>0N</latitude>
+              <longitude>0E</longitude>
+              <depth>0</depth>
+            </coordinate>
+          </point>
+          <radiusTolerance>5</radiusTolerance>
+        </basePoint>
+        <duration>30</duration>
+        <trajectory>
+          <radius type="float">25</radius>
+          <radiusTolerance type="float">5</radiusTolerance>
+          <type>Circular</type>
+          <length type="float">50</length>
+          <bearing type="float">0</bearing>
+          <direction>Clockwise</direction>
+        </trajectory>
+        <velocity type="float" unit="m/s" tolerance="5">1.0</velocity>
+        <annotation>
+          <documentation>Loiter over a point</documentation>
+          <implementation-class>pt.lsts.neptus.mp.maneuvers.Loiter</implementation-class>
+        </annotation>
+      </Loiter>
+    </maneuver>
+    <maneuver>
+      <StationKeeping kind="automatic">
+        <basePoint type="pointType">
+          <point>
+            <id>SKLoc</id>
+            <name>SKLoc</name>
+            <coordinate>
+              <latitude>0N</latitude>
+              <longitude>0E</longitude>
+              <depth>0</depth>
+            </coordinate>
+          </point>
+          <radiusTolerance>8</radiusTolerance>
+        </basePoint>
+        <duration>0</duration>
+        <trajectory>
+          <radius type="float">12</radius>
+        </trajectory>
+        <speed type="float" unit="m/s" tolerance="5">1.2</speed>
+        <annotation>
+          <documentation>Station Keeping</documentation>
+          <implementation-class>pt.lsts.neptus.mp.maneuvers.StationKeeping</implementation-class>
+        </annotation>
+      </StationKeeping>
+    </maneuver>
+    <maneuver>
+      <Rows kind="automatic">
+        <basePoint type="pointType">
+          <point>
+            <id/>
+            <coordinate>
+              <latitude>0N</latitude>
+              <longitude>0E</longitude>
+              <depth>0.0</depth>
+            </coordinate>
+          </point>
+          <radiusTolerance>0.0</radiusTolerance>
+        </basePoint>
+        <width>100.0</width>
+        <length>200.0</length>
+        <height>0.0</height>
+        <hstep>27.0</hstep>
+        <vstep>0.0</vstep>
+        <bearing>0.0</bearing>
+        <speed unit="m/s">1.2</speed>
+        <annotation>
+          <documentation>No documentation available</documentation>
+          <implementation-class>pt.lsts.neptus.mp.maneuvers.RowsManeuver</implementation-class>
+        </annotation>
+        </Rows>
+    </maneuver>
+    <maneuver>
+      <FollowPath kind="automatic">
+        <basePoint type="pointType">
+          <point>
+            <id/>
+            <coordinate>
+              <latitude>0N</latitude>
+              <longitude>0E</longitude>
+              <depth>0.0</depth>
+            </coordinate>
+          </point>
+          <radiusTolerance>0.0</radiusTolerance>
+        </basePoint>
+        <path/>
+        <speed unit="m/s">1.2</speed>
+        <annotation>
+          <documentation>No documentation available</documentation>
+          <implementation-class>pt.lsts.neptus.mp.maneuvers.FollowPath</implementation-class>
+        </annotation>
+      </FollowPath>
+    </maneuver>
+    <maneuver>
+        <FollowTrajectory kind="automatic">
+            <basePoint type="pointType">
+                <point>
+                    <id/>
+                    <coordinate>
+                        <latitude>0N</latitude>
+                        <longitude>0E</longitude>
+                        <depth>0.0</depth>
+                    </coordinate>
+                </point>
+                <radiusTolerance>0.0</radiusTolerance>
+            </basePoint>
+            <trajectory/>
+            <speed unit="m/s">1.2</speed>
+            <annotation>
+                <documentation>No documentation available</documentation>
+                <implementation-class>pt.lsts.neptus.mp.maneuvers.FollowTrajectory</implementation-class>
+            </annotation>
+        </FollowTrajectory>
+    </maneuver>
+    <maneuver>
+        <RIPattern kind="automatic">
+            <basePoint type="pointType">
+                <point>
+                    <id/>
+                    <coordinate>
+                        <latitude>0N</latitude>
+                        <longitude>0E</longitude>
+                        <depth>0.0</depth>
+                    </coordinate>
+                </point>
+                <radiusTolerance>0.0</radiusTolerance>
+            </basePoint>
+            <width>100.0</width>
+            <hstep>20.0</hstep>
+            <bearing>0.0</bearing>
+            <squareCurve>false</squareCurve>
+            <speed unit="m/s">1.2</speed>
+            <annotation>
+                <documentation>No documentation available</documentation>
+                <implementation-class>pt.lsts.neptus.mp.maneuvers.RIPattern</implementation-class>
+            </annotation>
+        </RIPattern>
+    </maneuver>
+    <maneuver>
+        <CrossHatchPattern kind="automatic">
+            <basePoint type="pointType">
+                <point>
+                    <id/>
+                    <coordinate>
+                        <latitude>0N</latitude>
+                        <longitude>0E</longitude>
+                        <depth>0.0</depth>
+                    </coordinate>
+                </point>
+                <radiusTolerance>0.0</radiusTolerance>
+            </basePoint>
+            <width>100.0</width>
+            <hstep>20.0</hstep>
+            <bearing>0.0</bearing>
+            <squareCurve>false</squareCurve>
+            <speed unit="m/s">1.2</speed>
+            <annotation>
+                <documentation>No documentation available</documentation>
+                <implementation-class>pt.lsts.neptus.mp.maneuvers.CrossHatchPattern</implementation-class>
+            </annotation>
+        </CrossHatchPattern>
+    </maneuver>
+    <maneuver>
+        <ExpandingSquarePattern kind="automatic">
+            <basePoint type="pointType">
+                <point>
+                    <id/>
+                    <coordinate>
+                        <latitude>0N</latitude>
+                        <longitude>0E</longitude>
+                        <depth>0.0</depth>
+                    </coordinate>
+                </point>
+                <radiusTolerance>0.0</radiusTolerance>
+            </basePoint>
+            <width>100.0</width>
+            <hstep>50</hstep>
+            <bearing>0.0</bearing>
+            <firstCurveRight>true</firstCurveRight>
+            <speed unit="m/s">1.2</speed>
+            <annotation>
+                <documentation>No documentation available</documentation>
+                <implementation-class>pt.lsts.neptus.mp.maneuvers.ExpandingSquarePattern</implementation-class>
+            </annotation>
+        </ExpandingSquarePattern>
+    </maneuver>
+    <maneuver>
+        <RowsCoverage kind="automatic">
+          <basePoint>
+            <point>
+              <id>id_omvbvr</id>
+              <name>id_omvbvr</name>
+              <coordinate>
+                <latitude>0N0'0.00''</latitude>
+                <longitude>0E0'0.00''</longitude>
+                <height>0.0</height>
+              </coordinate>
+              <z>0</z>
+              <zunits>DEPTH</zunits>
+            </point>
+          </basePoint>
+          <speed unit="m/s">1.0</speed>
+          <width>100.0</width>
+          <length>200.0</length>
+          <bearing>0.0</bearing>
+          <angleAperture>120.0</angleAperture>
+          <range>30</range>
+          <overlapPercentage>10</overlapPercentage>
+            <annotation>
+                <documentation>No documentation available</documentation>
+                <implementation-class>pt.lsts.neptus.mp.maneuvers.RowsCoverage</implementation-class>
+            </annotation>
+        </RowsCoverage>
+      </maneuver>
+      <maneuver>           
+        <FollowPoint kind="automatic">
+          <basePoint>
+            <point>
+              <id>id_qnotbp</id>
+              <name>id_qnotbp</name>
+              <coordinate>
+                <latitude>0N</latitude>
+                <longitude>0E</longitude>
+                <height>0.0</height>
+              </coordinate>
+              <z>0</z>
+              <zunits>DEPTH</zunits>
+            </point>
+          </basePoint>
+          <speed unit="m/s">2.0</speed>
+          <idToFollow>lauv-noptilus-1</idToFollow>
+          <customData></customData>
+          <annotation>
+                <documentation>No documentation available</documentation>
+                <implementation-class>pt.lsts.neptus.mp.maneuvers.FollowPoint</implementation-class>
+            </annotation>
+        </FollowPoint>
+    </maneuver>
+    <maneuver>
+      <RowsManeuver kind="automatic">
+        <basePoint type="pointType">
+          <point>
+            <id/>
+            <coordinate>
+              <latitude>0N</latitude>
+              <longitude>0E</longitude>
+              <depth>0.0</depth>
+            </coordinate>
+          </point>
+          <radiusTolerance>0.0</radiusTolerance>
+        </basePoint>
+        <width>100.0</width>
+        <length>200.0</length>
+        <height>0.0</height>
+        <hstep>27.0</hstep>
+        <vstep>0.0</vstep>
+        <bearing>0.0</bearing>
+        <speed unit="m/s">1.0</speed>
+        <annotation>
+          <documentation>No documentation available</documentation>
+          <implementation-class>pt.lsts.neptus.mp.maneuvers.RowsManeuver</implementation-class>
+        </annotation>
+      </RowsManeuver>
+    </maneuver>
+    <maneuver>
+      <RIPattern kind="automatic">
+        <basePoint type="pointType">
+          <point>
+            <id/>
+            <coordinate>
+              <latitude>0N</latitude>
+              <longitude>0E</longitude>
+              <depth>0.0</depth>
+            </coordinate>
+          </point>
+          <radiusTolerance>0.0</radiusTolerance>
+        </basePoint>
+        <width>100.0</width>
+        <hstep>20.0</hstep>
+        <bearing>0.0</bearing>
+        <squareCurve>false</squareCurve>
+        <speed unit="m/s">1.0</speed>
+        <annotation>
+          <documentation>No documentation available</documentation>
+          <implementation-class>pt.lsts.neptus.mp.maneuvers.RIPattern</implementation-class>
+        </annotation>
+      </RIPattern>
+    </maneuver>
+    <maneuver>
+      <CrossHatchPattern kind="automatic">
+        <basePoint type="pointType">
+          <point>
+            <id/>
+            <coordinate>
+              <latitude>0N</latitude>
+              <longitude>0E</longitude>
+              <depth>0.0</depth>
+            </coordinate>
+          </point>
+          <radiusTolerance>0.0</radiusTolerance>
+        </basePoint>
+        <width>100.0</width>
+        <hstep>20.0</hstep>
+        <bearing>0.0</bearing>
+        <squareCurve>false</squareCurve>
+        <speed unit="m/s">1.0</speed>
+        <annotation>
+          <documentation>No documentation available</documentation>
+          <implementation-class>pt.lsts.neptus.mp.maneuvers.CrossHatchPattern</implementation-class>
+        </annotation>
+      </CrossHatchPattern>
+    </maneuver>
+    <maneuver>
+      <FollowSystem kind="automatic">
+        <basePoint type="pointType">
+          <point>
+            <id/>
+            <coordinate>
+              <latitude>0N</latitude>
+              <longitude>0E</longitude>
+              <depth>0.0</depth>
+            </coordinate>
+          </point>
+          <radiusTolerance>0.0</radiusTolerance>
+        </basePoint>
+        <path/>
+        <annotation>
+          <documentation>No documentation available</documentation>
+          <implementation-class>pt.lsts.neptus.mp.maneuvers.FollowSystem</implementation-class>
+        </annotation>
+      </FollowSystem>
+    </maneuver>
+  </feasibleManeuvers>
+  <communication-means>
+    <comm-mean>
+      <name>ethernet</name>
+      <type>ethernet</type>
+      <host-address>10.8.0.8</host-address>
+      <protocols> imc</protocols>
+      <latency value="100M" unit="bps"/>
+      <protocols-args>
+        <imc>
+          <port>6002</port>
+          <port-tcp>6002</port-tcp>
+          <udp-on>true</udp-on>
+          <tcp-on>false</tcp-on>
+          <imc-id>28:13</imc-id>
+        </imc>
+      </protocols-args>
+    </comm-mean>
+  </communication-means>
+  <consoles>
+    <console name="Otter Console">
+      <xml-file>../conf/consoles/ntnu/otterASV.ncon</xml-file>
+    </console>
+  </consoles>
+</system>

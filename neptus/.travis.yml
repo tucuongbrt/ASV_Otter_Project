@@ -1,0 +1,12 @@
+language: java
+
+before_install:
+ - sudo apt-get -qq update
+
+jdk:
+  - openjdk8
+#  - oraclejdk9
+#  - oraclejdk11
+
+  script:
+    - ./gradlew buildJars
