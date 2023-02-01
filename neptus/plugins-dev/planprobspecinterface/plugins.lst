@@ -3,4 +3,4 @@
 # COMPILED BY=@COMPILED BY@
 # LEGAL_COPY=@LEGAL_COPY@
 
-pt.lsts.neptus.plugins.planprobspecinterface.ShortestPathPlanner
+pt.lsts.neptus.plugins.planprobspecinterface.PathPlanner
